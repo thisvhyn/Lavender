@@ -856,32 +856,26 @@
         padding-bottom: 60px;
       }
 
-      /* ROMBAKAN MOBILE PREMIUM: Card Bawah */
+      /* Contact card — mobile only
+         Desktop tetap memakai style asli di atas. */
       .contact-card {
-        padding: 50px 25px;
-        border-radius: 20px;
-        overflow: hidden; /* Mencegah efek glow bocor keluar card */
+        padding: 42px 24px 40px;
+        border-radius: 18px;
+        overflow: hidden;
         background: var(--black);
       }
 
-      /* Mengubah solid circle menjadi Ambient Glow (Aurora Effect) */
+      /* Mobile: card dibuat hitam polos tanpa glow hijau */
       .contact-card::after {
-        top: auto;
-        bottom: -50px;
-        right: -50px;
-        width: 260px;
-        height: 260px;
-        background: var(--green);
-        filter: blur(75px); /* Kunci utama kesan premium */
-        opacity: 0.45; /* Transparansi agar tidak menelan teks */
+        display: none;
       }
 
-      /* Teks kembali bersih, hapus semua text-shadow yang kotor */
       .contact-content h2 {
-        font-size: clamp(2.8rem, 13vw, 4.5rem);
+        font-size: clamp(2.45rem, 10.5vw, 3.6rem);
         color: #ffffff;
-        text-shadow: none; 
-        line-height: 0.95;
+        text-shadow: none;
+        line-height: 0.93;
+        letter-spacing: -0.075em;
       }
 
       .contact-content h2 span {
@@ -890,39 +884,42 @@
       }
 
       .contact-content p {
-        color: #c4c8be;
+        max-width: 480px;
+        color: #b9bcb4;
+        font-size: 0.88rem;
+        line-height: 1.65;
         text-shadow: none;
       }
 
       .contact-content .eyebrow {
+        font-size: 0.62rem;
+        letter-spacing: 0.085em;
         text-shadow: none;
       }
 
-      /* Hierarki Tombol Premium */
       .contact-actions {
         flex-direction: column;
         width: 100%;
-        gap: 12px;
-        margin-top: 36px;
+        gap: 10px;
+        margin-top: 30px;
       }
 
       .contact-actions .button {
         width: 100%;
-        min-height: 52px; /* Area tap diperbesar sedikit agar lebih enak ditekan */
+        min-height: 49px;
+        font-size: 0.72rem;
       }
 
-      /* Tombol Utama (Primary): Solid Green */
       .contact-actions .button-outline:first-child {
         background: var(--green);
         color: var(--black);
         border-color: var(--green);
       }
 
-      /* Tombol Kedua (Secondary): Glass style / Transparan tipis */
       .contact-actions .button-outline:last-child {
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255, 255, 255, 0.025);
         color: white;
-        border-color: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.16);
       }
 
       .footer-content {
